@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap');
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+.container{
+	max-width: 1140px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.text-center{
+	text-align: center !important;
+}
+.text-left{
+	text-align: left !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-uppercase{
+	text-transform: uppercase !important;
+}
+.align-items-center{
+	align-items: center;
+}
+.section-title{
+	width: 100%;
+	text-align: center;
+}
+
+/*Header*/
+header{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 0 15px;
+	z-index: 11;
+}
+header.fixed{
+	background-color: #ffffff;
+	position: fixed;
+	border-color: #eeeeee;
+	z-index: 100;
+	animation: fixHeader .5s ease;
+}
+@keyframes fixHeader{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+header .row{
+	justify-content: space-between;
+	align-items: center;
+}
+header .brand-name{
+	margin-top: 10px;
+}
+header .brand-name .logo-sm{
+	display: none;
+}
+header .brand-name a img{
+	width: 250px;
+}
+/*Style for fixed navbar*/
+header.fixed .brand-name a{
+	color: #000000;
+}
+header.fixed .brand-name .logo{
+	display: none;
+}
+header.fixed .brand-name .logo-sm{
+	display: block;
+}
+header .navbar ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+header .navbar ul li{
+	display: inline-block;
+	margin-left: 35px;
+}
+header .navbar ul li a{
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 72px;
+	color: #ffffff;
+	position: relative;
+	display: block;
+	font-weight: 600;
+}
+header.fixed .navbar ul li a{
+	color: #000000;
+}
+
+.home{
+	min-height: 100vh;
+	background-image: url('../images/banner.png');
+	background-size: cover;
+	background-position: top center;
+	padding: 15px;
+}
+.home .full-screen{
+	min-height: 100vh;
+}
+.home .home-content{
+	flex: 0 0 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.home .home-content .block{
+	flex: 0 0 40%;
+	max-width: 40%;
+	padding-left: 35px;
+	margin-top: 100px;
+}
+.home .home-content .block h1{
+	color: #ffffff;
+	font-size: 45px;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	line-height: 50px;
+}
+.home .home-content .block p{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 20px 0;
+	padding: 0;
+}
+.home .home-content .block .cv-btn{
+	padding-top: 20px;
+}
+.home .home-content .block .cv-btn img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.home .home-content .block .cv-btn a{
+	border-radius: 4px;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	padding: 12px 30px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	background-color: transparent;
+	transition: all .5s ease;
+}
+.home .home-content .block .hero-social-links{
+	margin: 40px 0;
+}
+.home .home-content .block .hero-social-links ul li{
+	display: inline-block;
+	margin-right: 30px;
+}
+.home .home-content .block .hero-social-links a{
+	border-radius: 4px;
+	color: #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	background-color: transparent;
+	transition: all .5s ease;
+}
+.home .home-content .block .hero-social-links a .fa{
+	font-size: 30px;
+	margin-right: 5px;
+	background-color: transparent;
+}
+.home .home-content .hero-image{
+	flex: 0 0 60%;
+	max-width: 60%;
+	text-align: center;
+	margin-top: 50px;
+}
+.home .home-content .hero-image img{
+	width: 50%;
+}
+
+/*Hamburger Menu e.g Menu for mobile devices*/
+.ham-burger .fa{
+	font-size: 20px;
+	display: none;
+	height: 30px;
+	width: 35px;
+	background-color: #ffffff;
+	color: #598a87;
+	border-radius: 3px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #598a87;
+}
+
+/*Flavour Style*/
+.flavour{
+	width: 100%;
+	padding: 40px 0;
+	background-color: #2e2c2f;
+}
+.flavour .section-title h1{
+	font-size: 20px;
+	margin-bottom: 40px;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+.flavour .companies{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.flavour .company-item{
+	width: 20%;
+}
+.flavour .company-item img{
+	width: 100%;
+}
+
+/*physical products styles*/
+.physical{
+	width: 100%;
+	padding: 100px 0;
+}
+.physical .section-title h1{
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #2d2c2d;
+	font-weight: 600;
+}
+.physical .section-title p{
+	font-size: 16px;
+	color: #666666;
+	width: 60%;
+	margin: auto;
+	margin-bottom: 40px;
+}
+.physical .physical-items{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.physical .physical-items .physical-item{
+	width: 22%;
+	padding: 40px 20px;
+	text-align: center;
+	border: 2px solid #618f8c;
+	border-radius: 10px;
+}
+.physical .physical-items .physical-item .heading{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+.physical .physical-items .physical-item .amount{
+	font-size: 30px;
+	color: #588b89;
+	font-weight: 700;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+.physical .physical-items .physical-item .amount .amount-text{
+	font-size: 20px;
+}
+.physical .physical-items .physical-item .desc{
+	font-size: 14px;
+	font-weight: 700;
+}
+
+/*About us styles*/
+.about{
+	width: 100%;
+	padding: 70px 0;
+	background-color: #bdad79;
+}
+.about .about-items{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.about .about-items .about-item{
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+.about .about-items .about-item .about-item-image img{
+	width: 250px;
+	height: 250px;
+	display: block;
+	margin: auto;
+	border-radius: 50%;
+}
+.about .about-items .about-item .about-item-name{
+	text-align: center;
+	margin: 10px 0;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: 700;
+}
+.about .about-items .about-item .about-item-designation{
+	text-align: center;
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+.about .about-items .about-item .about-item-text-head{
+	margin: 30px 0;
+	font-size: 20px;
+	color: #FFFFFF;
+	font-weight: 700;
+}
+.about .about-items .about-item .about-item-text-desc{
+	font-size: 16px;
+	color: #FFFFFF;
+	margin-bottom: 50px;
+}
+.about .about-items .about-item .about-item-text-link a{
+	border-radius: 4px;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	padding: 12px 30px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	background-color: transparent;
+	transition: all .5s ease;
+}
+.about .about-items .about-item .about-item-text-link a .fa{
+	margin-right: 10px;
+}
+
+/*Roadmap Styles*/
+.roadmap{
+	width: 100%;
+	padding: 70px 0 0 0;
+	background-color: #2e2c2f;
+	border-bottom: 2px solid #FFFFFF;
+}
+.roadmap .section-title h1{
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 20px auto 0 auto;
+  padding-bottom: 70px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* timeline-container around content */
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -19px;
+  background-color: transparent;
+  background-image: url('../images/symbol.jpg');
+  background-position: center;
+  background-size: cover;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the timeline-container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the timeline-container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left timeline-container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent #5a8c8b transparent #5a8c8b;
+}
+
+/* Add arrows to the right timeline-container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #5a8c8b transparent transparent;
+}
+
+/* Fix the circle for timeline-containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #5a8c8b;
+  position: relative;
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+.content .content-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #305a5a;
+}
+.content .content-item .fa{
+	border: 4px solid #FFFFFF;
+	border-radius: 50%;
+	padding: 4px;
+}
+.content .content-item .content-item-left .content-item-head-q{
+  font-size: 20px;
+  font-weight: 600;
+}
+.content .content-item .content-item-left .content-item-head{
+  font-size: 16px;
+  font-weight: 600;
+}
+.content .content-item .content-item-left .content-item-head span{
+  font-weight: 500;
+}
+.content .content-item .content-item-left .content-item-desc{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/*Footer Styles*/
+.footer{
+	position: relative;
+	width: 100%;
+	padding: 50px 0;
+	background-color: black;
+	text-align: center;
+	background-image: url('../images/footer.png');
+	background-size: cover;
+	background-position: top center;
+}
+.footer .copyright{
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	color: grey;
+}
+.footer .row{
+	display: block;
+}
+.footer .logo-footer{
+	width: 100%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.footer .logo-footer img{
+	width: 250px;
+}
+.footer .footer-text{
+	width: 50%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.footer .footer-text p{
+	color: #aa986f;
+	font-size: 16px;
+}
+.footer ul{
+	width: 60%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer ul li{
+	width: 33.33%;
+	display: inline-block;
+}
+.footer ul li a{
+	font-size: 16px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: 600;
+}
+.footer ul li a .fa{
+	font-size: 30px;
+	margin-right: 5px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width timeline-containers */
+  .timeline-container {
+	  width: 100%;
+	  padding-left: 70px;
+	  padding-right: 25px;
+  }
+  .content{
+  	padding: 20px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #5a8c8b transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right timeline-containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+  .content-item .fa{
+  	display: none;
+  }
+
+}
+/*Style for different devices*/
+@media(max-width: 767px){
+	header{
+		position: fixed;
+		padding: 15px;
+		background-color: #ffffff;
+		border: none;
+		border-bottom: 1px solid #eeeeee;
+	}
+	header .brand-name .logo{
+		display: none;
+	}
+	header .brand-name .logo-sm{
+		display: block;
+	}
+	header .brand-name a img{
+		width: 150px;
+	}
+	.ham-burger .fa{
+		display: inline-block;
+	}
+	.navbar{
+		position: absolute;
+		background-color: #ffffff;
+		width: 100%;
+		left: 0;
+		top: 60px;
+		padding: 15px;
+		border-top: 1px solid #eeeeee;
+		display: none;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.navbar.show{
+		display: block;
+	}
+	header .navbar ul li{
+		display: block;
+		margin: 0;
+	}
+	header .navbar ul li a{
+		line-height: 42px;
+		color: #000000;
+	}
+	header .navbar ul li a::before{
+		background-color: #febd01;
+	}
+	.home .home-content .block{
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding-left: 0;
+	}
+	.home .home-content .block h1{
+		font-size: 30px;
+	}
+	.home .home-content .block h3{
+		font-size: 20px;
+	}
+	.home .home-content .hero-image{
+		display: none;
+	}
+
+	.flavour .company-item{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.flavour .company-item img{
+		display: block;
+		margin: auto;
+		width: 60%;
+	}
+
+	.physical .section-title h1{
+		font-size: 20px;
+	}
+	.physical .section-title p{
+		width: 90%;
+		text-align: left;
+	}
+	.physical .physical-items .physical-item{
+		width: 90%;
+		margin: 10px auto;
+	}
+
+	.about .about-items{
+		width: 90%;
+		margin: auto;
+	}
+	.about .about-items .about-item{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.footer .copyright{
+		bottom: 20px;
+	}
+	.footer .footer-text{
+		width: 90%;
+	}
+	.footer ul{
+		flex-direction: column;
+		width: 90%;
+	}
+	.footer ul li{
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+
+@media(min-width: 768px) and (max-width:  1023px){
+	header{
+		/*position: fixed;
+		padding: 15px;
+		border: none;
+		z-index: 1000;*/
+	}
+	header .navbar ul li{
+		margin-left: 10px;
+	}
+	header .navbar ul li a{
+		font-size: 14px;
+	}
+	.home .home-content .block,
+	.home .home-content .hero-image{
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.physical .physical-items {
+		width: 90%;
+		margin: auto;
+	}
+	.physical .physical-items .physical-item{
+		width: 48%;
+		margin-bottom: 20px;
+	}
+
+	.about .about-items .about-item{
+		padding: 30px;
+	}
+
+	.footer .copyright{
+		display: none;
+	}
+
+	.content-item .fa{
+  	display: none;
+  }
+  .content{
+  	padding: 20px;
+  }
+}
+@media(min-width: 769px) and (max-width:  1024px){
+	.physical .physical-items{
+		width: 90%;
+		margin: auto;
+	}
+	.about .about-items .about-item{
+		padding: 20px;
+	}
+
+	.footer .copyright{
+		display: none;
+	}
+}
